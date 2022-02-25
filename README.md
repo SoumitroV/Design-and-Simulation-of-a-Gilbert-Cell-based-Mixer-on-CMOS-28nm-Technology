@@ -51,7 +51,7 @@ Fig 2. presents the drain current (I_D) of NMOS device as a function of drain to
 Fig 3. I_D vs V_GS for NMOS device
 </p>
 
-Fig 3. presents I_D of NMOS device as a function of V_GS for some fixed value of V_DS. As can be observed the device is no longer follows the squared law but has a linear rise even in saturation region due to velocity saturation effects!
+Fig 3. presents I_D of NMOS device as a function of V_GS for some fixed value of V_DS. As can be observed the device is no longer follows the square law but has a linear rise even in saturation region due to velocity saturation effects!
 
 <br/>
 <p align="center">
@@ -72,4 +72,4 @@ Fig 4. presents I_D of PMOS device as a function of V_SG for some fixed value of
 Fig 5. Mixer schematic
 </p>
 
-
+Fig 5. presents the mixer schematic. Although square law cannot be used to determine the quiscent currents, width scaling to generate scaled currents still holds especially when fingers are used. Hence a reference current source is used and mirrored     
