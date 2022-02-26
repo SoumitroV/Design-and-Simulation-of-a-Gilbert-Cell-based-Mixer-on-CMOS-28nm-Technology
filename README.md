@@ -2,21 +2,15 @@
 
 ## Table of Contents
 
-Introduction
-
-Device Characterization
-
-Circuit Design
-
-Simulation Results
-
-Peformance Comparison
-
-Conclusion
-
-Author 
-
-Acknowledgements
+- [Introduction](https://github.com/SoumitroV/Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology/edit/main/README.md#introduction)
+- [Device Characterization](https://github.com/SoumitroV/Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology/edit/main/README.md#device-characterization)
+- [Circuit Design](https://github.com/SoumitroV/Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology/edit/main/README.md#circuit-design)
+- [Simulation Results](https://github.com/SoumitroV/Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology/edit/main/README.md#simulation-results)
+- [Peformance Comparison](https://github.com/SoumitroV/Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology/edit/main/README.md#performance-comparison)
+- [Conclusion](https://github.com/SoumitroV/Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology/edit/main/README.md#conclusion)
+- [Author](https://github.com/SoumitroV/Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology/edit/main/README.md#author) 
+- [Acknowledgements](https://github.com/SoumitroV/Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology/edit/main/README.md#acknowledgements)
+- [References](https://github.com/SoumitroV/Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology/edit/main/README.md#references)
 
 ## Introduction
 
@@ -160,5 +154,11 @@ Soumitro Vyapari, B.Tech(EE), Indian Institute of Technology Tirupati,  Andhra P
 - [Synopsis Team/Company](synopsys.com/company/contact-synopsys/office-locations/india/about-synopsys-india.html)
 - [IIT Hyderabad](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)
 - Active and vibrant hackathon community
+
+## References
+
+[1] Daniel Celino, Yuri Olivato, Talita Granado, J.H. Correia, and Joao Carmo. A rf modulator demodulator for small signal range wireless devices. 07 2016.<br/>
+[2] SAZ Murad, RK Pokharel, H Kanaya, and K Yoshida. A 3.0–5.0 ghz high linearity and low power cmos up-conversion mixer for uwb applications. In 2010 IEEE International Conference of Electron Devices and SolidState Circuits (EDSSC), pages 1–4. IEEE, 2010.<br/>
+[3] Design of Analog CMOS Integrated Circuits (Behzad Razavi), McGraw-Hill, 2001.
 
 
