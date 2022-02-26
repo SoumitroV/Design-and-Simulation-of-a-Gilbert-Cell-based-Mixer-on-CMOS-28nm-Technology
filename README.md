@@ -6,7 +6,7 @@
 - [Device Characterization](https://github.com/SoumitroV/Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology/edit/main/README.md#device-characterization)
 - [Circuit Design](https://github.com/SoumitroV/Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology/edit/main/README.md#circuit-design)
 - [Simulation Results](https://github.com/SoumitroV/Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology/edit/main/README.md#simulation-results)
-- [Peformance Comparison](https://github.com/SoumitroV/Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology/edit/main/README.md#performance-comparison)
+- [Performance Comparison](https://github.com/SoumitroV/Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology/edit/main/README.md#performance-comparison)
 - [Conclusion](https://github.com/SoumitroV/Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology/edit/main/README.md#conclusion)
 - [Author](https://github.com/SoumitroV/Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology/edit/main/README.md#author) 
 - [Acknowledgements](https://github.com/SoumitroV/Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology/edit/main/README.md#acknowledgements)
@@ -14,7 +14,7 @@
 
 ## Introduction
 
-Mixers find wide use in communication applications expecially in up and down converter analog font ends. New applications such as Radio Frequency Integrated Circuits (RFIC) require low-power, low-cost single chip designs. This repository presents the design and simulation of Gilbert cell based mixer on CMOS 28nm technology. The design has been created on Synopsis [Custom Compiler](https://www.synopsys.com/implementation-and-signoff/custom-design-platform/custom-compiler.html) software and simulated using [PrimeWave](https://www.synopsys.com/implementation-and-signoff/ams-simulation/primewave.html) environment. 
+Mixers find wide use in communication applications especially in up and down converter analog font ends. New applications such as Radio Frequency Integrated Circuits (RFIC) require low-power, low-cost single chip designs. This repository presents the design and simulation of Gilbert cell based mixer on CMOS 28nm technology. The design has been created on Synopsis [Custom Compiler](https://www.synopsys.com/implementation-and-signoff/custom-design-platform/custom-compiler.html) software and simulated using [PrimeWave](https://www.synopsys.com/implementation-and-signoff/ams-simulation/primewave.html) environment. 
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/41693726/155741693-ada2c3e9-4e41-4473-857c-a0bd099c9e77.png">
@@ -27,7 +27,7 @@ Fig 1. shows the mixer schematic, consisting of a folded Gilbert cell. Here the 
 
 ## Device Characterization
 
-Before the design of any circuit, a thorough understanding of the characterisitics of used device is required. This becomes even more crucial for MOS devices of lower technology nodes which deviate a lot from the ideal MOS characteristics due to short channel effects.
+Before the design of any circuit, a thorough understanding of the characteristics of used device is required. This becomes even more crucial for MOS devices of lower technology nodes which deviate a lot from the ideal MOS characteristics due to short channel effects.
 
 The device characterization of NMOS and PMOS was performed using standard circuits for device characterization. The mosfets were taken from 28nm PDK library with width to length ratio of 0.3um/0.03um. The drain to source voltages and gate to source voltages were sweeped to produce the below plots.
 
@@ -70,7 +70,7 @@ Fig 4. presents I_D of PMOS device as a function of V_SG for some fixed value of
 Fig 5. Mixer schematic
 </p>
 
-Fig 5. presents the mixer schematic. The schematic has been modified to include PMOS devices as active current loads followed with cascode transistors. This results in larger voltage gain while consuming lesser head room compared to resistors. This modification requries proper biasing which in this case has been provided using a PMOS followed with a resistor network. This configuration can be easily replaced with a low voltage cascode current mirror if better matching is requried in presence of threshold voltage variations. Although square law cannot be used to determine the quiscent currents, width scaling to generate scaled currents still holds especially when fingers are used. Hence a reference current source (I) is used and mirrored in the RF branch, while the active PMOS loads are designed to mirror I/2 each. 
+Fig 5. presents the mixer schematic. The schematic has been modified to include PMOS devices as active current loads followed with cascode transistors. This results in larger voltage gain while consuming lesser head room compared to resistors. This modification requires proper biasing which in this case has been provided using a PMOS followed with a resistor network. This configuration can be easily replaced with a low voltage cascode current mirror if better matching is required in presence of threshold voltage variations. Although square law cannot be used to determine the quiescent currents, width scaling to generate scaled currents still holds especially when fingers are used. Hence a reference current source (I) is used and mirrored in the RF branch, while the active PMOS loads are designed to mirror I/2 each. 
 
 ## Simulation Results
 
@@ -81,7 +81,7 @@ Fig 5. presents the mixer schematic. The schematic has been modified to include 
 Fig 6. Mixer simulation input and output waveforms
 </p>
 
-The simulation of mixer was perfomed using specifications as presented in [1]. Fig 6. shows the mixer output waveform obtained by applying f_RF = 50MHz and f_LO = 450MHz. The resulting output signal has a frequency IF_1 = 400MHz and IF_2  = 500MHz. Note that the mixer provides almost unity gain or a conversion gain of 0.131dB precisely.
+The simulation of mixer was performed using specifications as presented in [1]. Fig 6. shows the mixer output waveform obtained by applying f_RF = 50MHz and f_LO = 450MHz. The resulting output signal has a frequency IF_1 = 400MHz and IF_2  = 500MHz. Note that the mixer provides almost unity gain or a conversion gain of 0.131dB precisely.
 
 <br/>
 <p align="center">
@@ -101,7 +101,7 @@ Fig 7. shows the output signal's DFT normalized wrt to peak frequency component.
 Fig 8. Testbench used to determine -3dB point
 </p>
 
-Fig 8. shows the testbench setup used to determine -3dB point for the mixer. A "vsource" element is used to provide the RF and LO signal. AC analysis is peformed by using the default frequency as sweep variable and the magnitude of output differential signal is set as output. Note that the output signals are terminated with two NMOS source follower circuits to simulate the effect of connecting the mixer to further stages in an IC. 
+Fig 8. shows the testbench setup used to determine -3dB point for the mixer. A "vsource" element is used to provide the RF and LO signal. AC analysis is performed by using the default frequency as sweep variable and the magnitude of output differential signal is set as output. Note that the output signals are terminated with two NMOS source follower circuits to simulate the effect of connecting the mixer to further stages in an IC. 
 
 
 <br/>
@@ -124,7 +124,7 @@ Fig 9. shows that the -3dB point for the mixer is achieved at a frequency of 7.1
 Fig 10. DC transfer curves of the mixer
 </p>
 
-Finally Fig 10. presents the DC transfer curves of the designed mixer. The mixer lacks linearity expecially for higher voltage levels of RF signal, this is evident from the unevenly spaced transfer curves which bunch up for higher RF voltage.
+Finally, Fig 10. presents the DC transfer curves of the designed mixer. The mixer lacks linearity especially for higher voltage levels of RF signal, this is evident from the unevenly spaced transfer curves which bunch up for higher RF voltage.
 
 ## Performance Comparison
 
@@ -141,7 +141,7 @@ The table presents performance comparison with previously done work in literatur
 
 ## Conclusion
 
-The repository presents the design and simulation of Gilbert cell based mixer on 28nm technology node. The design consumes 0.54mW of power at 1.8V and provides nearly unity gain. Future works can include imporvement of conversion gain and increase in linearity by using better designs and biasing techniques. 
+The repository presents the design and simulation of Gilbert cell based mixer on 28nm technology node. The design consumes 0.54mW of power at 1.8V and provides nearly unity gain. Future works can include improvement of conversion gain and increase in linearity by using better designs and biasing techniques. 
 
 ## Author
 
