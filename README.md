@@ -101,7 +101,7 @@ Fig 7. shows the output signal's DFT normalized wrt to peak frequency component.
 Fig 8. Testbench used to determine -3dB point
 </p>
 
-Fig 8. shows the testbench setup used to determine -3dB point for the mixer. A "vsource" element is used to provide the RF and LO signal. AC analysis is performed by using the default frequency as sweep variable and the magnitude of output differential signal is set as output. Note that the output signals are terminated with two NMOS source follower circuits to simulate the effect of connecting the mixer to further stages in an IC. 
+Fig 8. shows the testbench setup used to determine -3dB point for the mixer. A "vsource" element is used to provide the RF and LO signal of amplitude 100mV. AC analysis was performed by using the default frequency as sweep variable and the magnitude of output differential signal was set as output. Note that the output signals are terminated with two NMOS source follower circuits to simulate the effect of connecting the mixer to further stages in an IC. 
 
 
 <br/>
