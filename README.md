@@ -8,7 +8,11 @@ Device Characterization
 
 Circuit Design
 
-Simulation
+Simulation Results
+
+Peformance Comparison
+
+Conclusion
 
 Author 
 
@@ -72,4 +76,85 @@ Fig 4. presents I_D of PMOS device as a function of V_SG for some fixed value of
 Fig 5. Mixer schematic
 </p>
 
-Fig 5. presents the mixer schematic. Although square law cannot be used to determine the quiscent currents, width scaling to generate scaled currents still holds especially when fingers are used. Hence a reference current source is used and mirrored     
+Fig 5. presents the mixer schematic. The schematic has been modified to include PMOS devices as active current loads followed with cascode transistors. This results in larger voltage gain while consuming lesser head room compared to resistors. This modification requries proper biasing which in this case has been provided using a PMOS followed with a resistor network. This configuration can be easily replaced with a low voltage cascode current mirror if better matching is requried in presence of threshold voltage variations. Although square law cannot be used to determine the quiscent currents, width scaling to generate scaled currents still holds especially when fingers are used. Hence a reference current source (I) is used and mirrored in the RF branch, while the active PMOS loads are designed to mirror I/2 each. 
+
+## Simulation Results
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/41693726/155828213-806a2334-16f8-49d9-be31-1632b2d17759.png">
+</p>
+<p align="center">
+Fig 6. Mixer simulation input and output waveforms
+</p>
+
+The simulation of mixer was perfomed using specifications as presented in [1]. Fig 6. shows the mixer output waveform obtained by applying f_RF = 50MHz and f_LO = 450MHz. The resulting output signal has a frequency IF_1 = 400MHz and IF_2  = 500MHz. Note that the mixer provides almost unity gain or a conversion gain of 0.131dB precisely.
+
+<br/>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/41693726/155828222-2450f627-bf53-462a-b0da-fac1b0b3abcc.png">
+</p>
+<p align="center">
+Fig 7. DFT of output waveform
+</p>
+
+Fig 7. shows the output signal's DFT normalized wrt to peak frequency component. As can be observed, the spectrum peaks around f = 400MHz and f = 500MHz confirming the multiplying property. Intrestingly figure also shows presence of a 50MHz component as some of the RF signal gets leaked to the output.
+
+<br/>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/41693726/155829965-e9b49c90-fa84-4958-9092-fc9c61f89e83.png">
+</p>
+<p align="center">
+Fig 8. Testbench used to determine -3dB point
+</p>
+
+Fig 8. shows the testbench setup used to determine -3dB point for the mixer. A "vsource" element is used to provide the RF and LO signal. AC analysis is peformed by using the default frequency as sweep variable and the magnitude of output differential signal is set as output. Note that the output signals are terminated with two NMOS source follower circuits to simulate the effect of connecting the mixer to further stages in an IC. 
+
+
+<br/>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/41693726/155829961-13622c5c-7f77-4aa9-aea0-61ac9921b12e.png">
+</p>
+<p align="center">
+Fig 9. Magnitude plot of output signal
+</p>
+
+Fig 9. shows that the -3dB point for the mixer is achieved at a frequency of 7.14GHz. Hence the mixer can be easily used for ISM band between 902MHz and 928MHz as well.
+
+<br/>
+
+<br/>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/41693726/155830279-15d2d7ff-7a21-42c6-bea2-0e55e32a6a5f.png">
+</p>
+<p align="center">
+Fig 10. DC transfer curves of the mixer
+</p>
+
+Finally Fig 10. presents the DC transfer curves of the designed mixer. The mixer lacks linearity expecially for higher voltage levels of RF signal, this is evident from the unevenly spaced transfer curves which bunch up for higher RF voltage.
+
+## Performance Comparison
+
+|               |      [1]      |      [2]      |   This work   |
+|     :---:     |     :---:     |     :---:     |     :---:     |
+|     Vdd (V)   |      5.0      |      1.2      |      1.8      |
+|Frequency (GHz)|     0.433     |      4.0      |     0.45      |
+|Technology (nm)|      700      |      180      |      28       |
+|     Gain      |      3.35     |      1.3      |     1.015     |
+|  Power (mW)   |       3       |      7.1      |      0.54     |
+|Chip Size (mm sq)|       -       |      0.82      |      -     |
+
+The table presents performance comparison with previously done work in literature. A clear trade off between gain and power can be observed here. The chip area can be determined with post layout measurements and is expected to be smaller than higher technology nodes.
+
+## Conclusion
+
+The repository presents the design and simulation of Gilbert cell based mixer on 28nm technology node. The design consumes 0.54mW of power at 1.8V and provides nearly unity gain. Future works can include imporvement of conversion gain and increase in linearity by using better designs and biasing techniques. 
+
+## Author
+
+Soumitro Vyapari, B.Tech(EE), Indian Institute of Technology Tirupati,  Andhra Pradesh 517506.
+
+## Acknowledgements
+
+Kunal Ghosh, Co-founder, VSD Corp. Pvt Ltd.
+
+
