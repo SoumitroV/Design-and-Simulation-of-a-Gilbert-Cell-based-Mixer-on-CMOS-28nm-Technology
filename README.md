@@ -1,4 +1,4 @@
-# Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology
+# Design and Simulation of a Gilbert Cell based Mixer on CMOS 28nm Technology
 
 ## Table of Contents
 
