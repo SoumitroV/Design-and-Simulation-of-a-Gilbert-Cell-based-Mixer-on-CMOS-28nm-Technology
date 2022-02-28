@@ -129,7 +129,7 @@ Finally, Fig 10. presents the DC transfer curves of the designed mixer. The mixe
 
 ## Netlist
 
-The netlist for mixer and mixer testbench can be found here.
+The netlist for mixer and mixer testbench can be found [here](https://github.com/SoumitroV/Design-and-Simulation-of-a-Gilbert-Cell-based-Mixer-on-CMOS-28nm-Technology/tree/main/Netlist).
 
 ## Performance Comparison
 
